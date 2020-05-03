@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, Subject, BehaviorSubject } from 'rxjs';
 import { Channels, Channel } from 'src/app/models/channels';
 import { combineLatest } from 'rxjs';
-import { shareReplay, catchError, tap, multicast } from 'rxjs/operators';
+import { shareReplay, catchError, tap, multicast , map} from 'rxjs/operators';
 import { VideosList, Video, VideoDetail } from 'src/app/models/videos';
 import { TrendingVerifiedVideos } from '../models/trendingVideos';
 

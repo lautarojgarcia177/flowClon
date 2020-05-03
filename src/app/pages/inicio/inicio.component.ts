@@ -19,6 +19,7 @@ export class InicioComponent implements OnInit {
   config: SwiperConfigInterface = {
     spaceBetween: 30,
     centeredSlides: true,
+    loop: true,
     effect: 'fade',
     pagination: {
       el: '.swiper-pagination',

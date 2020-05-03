@@ -13,6 +13,8 @@ export class DragOnTouchDirective {
       this.el.nativeElement.style.cursor = 'pointer';
    }
 
-   
+   @HostListener('swiperTouchStart') onSwiperTouchStart() {
+    this.el.nativeElement.style.cursor = 'grabbing';
+   }
 
 }
