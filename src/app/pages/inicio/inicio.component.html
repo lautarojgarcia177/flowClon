@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div *ngIf="slides$ | async as videosId"
+ class="swiper-container" [swiper]="config" [(index)]="index"
+  (swiperTouchStart)="showControls()" (mouseenter)="showControls()"
+  (mouseleave)="hideControls()" (swiperTouchEnd)="hideControls()">
+    <div class="swiper-wrapper" >
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[0]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[1]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[2]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[3]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail  [isInicioCarousel]="true" [imgSize]="thumbnailSize" [videoId]="videosId[4]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[5]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[6]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[7]"></app-video-thumbnail>
+        </div>
+        <div class="swiper-slide">
+            <app-video-thumbnail [isInicioCarousel]="true"  [imgSize]="thumbnailSize" [videoId]="videosId[8]"></app-video-thumbnail>
+        </div>
+    </div>  
+
+    <div class="swiper-pagination"></div>
+    
+    <div class="swiper-button-next swiper-button-white hide" id="big-carousel-next-btn"></div>
+    <div class="swiper-button-prev swiper-button-white hide" id="big-carousel-prev-btn"></div>
+</div>
+
+<app-channels></app-channels>
+</div>
+

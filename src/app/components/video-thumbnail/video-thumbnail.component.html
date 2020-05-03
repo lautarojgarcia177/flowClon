@@ -1,0 +1,17 @@
+<div #thumbnail (mouseenter)="onHover()" (mouseleave)="onMouseLeave()" id="thumbnail" *ngIf="video"
+[ngStyle]="{'background-image': 'url(' + img + ')'}" >
+    <div *ngIf="isChannelVideoThumbnail && isHovered" class="lautaro-container">
+        <span id="thumbnail-title">{{video.title}}</span>
+        <span id="thumbnail-description">{{video.description}}</span>
+        <span id="thumbnail-play-button"><i class="fas fa-play-circle fa-5x"></i></span>
+        <span id="thumbnail-views">Reproducciones: {{video.views_total}}</span>
+    </div>
+    <div *ngIf="isInicioCarousel && isHovered" class="lautaro-container">
+        <span id="thumbnail-title">{{video.title}}</span>
+        <span id="thumbnail-description">{{video.description}}</span>
+        <span id="thumbnail-play-button"><i class="fas fa-play-circle fa-5x"></i></span>
+        <span id="thumbnail-views">Reproducciones: {{video.views_total}}</span>
+    </div>
+</div>
+<!-- <app-loading *ngIf="!video"></app-loading> -->
+        

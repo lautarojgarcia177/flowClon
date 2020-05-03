@@ -1,0 +1,26 @@
+ul {
+    text-align: center;
+
+    & li {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: inline-block;
+
+        & a {
+            display: list-item;
+            list-style: square;
+            color: white;
+
+            & :hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: black;
+}

@@ -1,0 +1,54 @@
+#navbar {
+    padding: 0px;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: large;
+    z-index: 99999;
+}
+
+.navbar-unscrolled {
+    background-image: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26, 26, 26, 0) 100%);
+    position: absolute;
+    top: 0px; left: 0px;
+}
+
+.navbar-scrolled {
+    background-color: #1A1A1A;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.navbar-item {
+    padding-left: 2rem;
+}
+
+#inicio {
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+#logo {
+    height: 4rem;
+    flex-basis: auto;
+}
+
+
+#search {
+    font-size: xx-large;
+    margin-left: auto;
+}
+
+#user {
+    font-size: xx-large;
+    margin-right: 1.5rem;
+}
+
+a {
+    color: white;
+}

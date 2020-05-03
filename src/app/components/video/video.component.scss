@@ -1,0 +1,16 @@
+.container {
+    margin-top: 5rem;;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100vw * 0.3);
+
+    @media only screen and (max-width: 1200px) {
+        height: calc(100vw * 0.52);
+    }        
+}
+
+h1 {
+    color: #57DFB7;
+}

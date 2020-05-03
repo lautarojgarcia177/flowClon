@@ -1,0 +1,7 @@
+<div class="container" *ngIf="video$ | async as video">
+    <h1>{{video.title}}</h1>
+    <iframe frameborder="0"
+        [src]="videoEmbedUrl"
+        allowfullscreen></iframe>
+    <p>{{video.description}}</p>
+</div>

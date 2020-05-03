@@ -1,0 +1,26 @@
+#logo {
+    height: 4rem;
+    flex-basis: auto;
+}
+
+a {
+    color: white !important;
+}
+
+.navbar-unscrolled {
+    background-image: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26, 26, 26, 0) 100%);
+    position: absolute;
+    top: 0px; left: 0px;
+}
+
+.navbar-scrolled {
+    background-color: #1A1A1A;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+#inicio {
+    text-decoration: underline;
+}
