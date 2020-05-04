@@ -15,7 +15,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { DragOnTouchDirective } from './directives/drag-on-touch.directive';
-// import { LoadingComponent } from './components/loading/loading.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { BootstrapNavbarComponent } from 'src/app/components/bootstrap-navbar/bootstrap-navbar.component';
+import { VideoDataComponent } from './pages/video-data/video-data.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { DragOnTouchDirective } from './directives/drag-on-touch.directive';
     ChannelComponent,
     VideoComponent,
     VideoThumbnailComponent,
-//    LoadingComponent
+    LoadingComponent,
     FooterComponent,
     InicioComponent,
     SafePipe,
-    DragOnTouchDirective
+    DragOnTouchDirective,
+    BootstrapNavbarComponent,
+    VideoDataComponent
   ],
   imports: [
     BrowserModule,

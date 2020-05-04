@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
 
   ngOnInit() {
-    const navbar = document.getElementById('navbar');
+/*     const navbar = document.getElementById('navbar');
 
     window.onscroll = () => {
       if (window.scrollY === 0) {
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
       } else {
         navbar.classList.add('navbar-scrolled');
       }
-    };
+    }; */
   }
   
 }

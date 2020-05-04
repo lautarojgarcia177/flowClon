@@ -1,26 +1,28 @@
+
+.navbar {
+    font-size: large;
+    //background-image: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26, 26, 26, 0) 100%) !important;
+    background-color: rgba(26, 26, 26, 0.3) !important;
+}
+
+.bootstrap-navbar-scrolled {
+    background-color: #1A1A1A !important;
+}
+
+
 #logo {
     height: 4rem;
     flex-basis: auto;
 }
 
-a {
-    color: white !important;
+#search {
+    font-size: xx-large;
+    margin-right: 1.5rem;
+    margin-left: auto;
 }
 
-.navbar-unscrolled {
-    background-image: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26, 26, 26, 0) 100%);
-    position: absolute;
-    top: 0px; left: 0px;
+#user {
+    font-size: xx-large;
+    margin-right: 1.5rem;
 }
 
-.navbar-scrolled {
-    background-color: #1A1A1A;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-}
-
-#inicio {
-    text-decoration: underline;
-}

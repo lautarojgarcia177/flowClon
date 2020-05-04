@@ -1,0 +1,17 @@
+<div id="spacing"></div>
+<div class="container" *ngIf="video$ | async as video">
+    <div class="row">
+        <div class="col-md-3 d-flex justify-content-end align-items-center">
+            <img [src]="video.thumbnail_240_url">
+        </div>
+        <div class="col-md-9">
+            <h1>{{video.title}}</h1>
+            <p>{{video.description}}</p>
+            <div>
+                <button>Reproducir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-loading *ngIf="!video$"></app-loading>

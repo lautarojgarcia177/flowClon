@@ -17,7 +17,7 @@ import { NetflixCarouselService } from 'src/app/services/netflix-carousel.servic
 export class ChannelComponent implements OnInit {
 
   @Input() channel: Channel;
-  thumbnailSize = ThumbnailSize.medium;
+  thumbnailSize = ThumbnailSize.small;
 
   videos: Video[];
 
