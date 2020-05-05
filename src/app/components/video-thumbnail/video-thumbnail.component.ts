@@ -22,7 +22,6 @@ export class VideoThumbnailComponent implements OnInit {
   img: string;
   @Input() videoId: string;
   video: VideoDetail;
-  @Input() isChannelVideoThumbnail = false;
   @Input() isInicioCarousel = false;
   isHovered = false;
   @ViewChild('thumbnail') thumbnailRef: ElementRef;

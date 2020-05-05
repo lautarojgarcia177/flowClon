@@ -1,20 +1,16 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appDragOnTouch]'
+  selector: '[appPointerCursor]'
 })
-export class DragOnTouchDirective {
+export class PointerCursorDirective {
 
   constructor(private el: ElementRef) {
-    //el.nativeElement.style.cursor = 'grabbing';
+    
    }
 
    @HostListener('mouseenter') onMouseEnter() {
       this.el.nativeElement.style.cursor = 'pointer';
-   }
-
-   @HostListener('swiperTouchStart') onSwiperTouchStart() {
-    this.el.nativeElement.style.cursor = 'grabbing';
    }
 
 }

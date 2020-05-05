@@ -1,0 +1,9 @@
+<div class="lautaro-container" *ngIf="video"
+    [ngStyle]="{'background-image': 'url(' + video.thumbnail_1080_url + ')'}"
+    >
+    <span id="carousel-title">{{video.title}}</span>
+    <button id="reproducir-btn" (click)="reproducirVideo()">REPRODUCIR</button>
+    <button id="mas-info-btn">MÁS INFO</button>
+</div>
+<app-loading *ngIf="!video"></app-loading>
+        

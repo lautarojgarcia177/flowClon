@@ -13,12 +13,9 @@ export class BootstrapNavbarComponent implements OnInit {
 
   ngOnInit(): void {
     window.addEventListener('scroll', (e) => {
-      console.log('scroll event!', window.scrollY);
       if (window.scrollY > 0) {
-        console.log('esta escroleado');
         this.navbarRef.nativeElement.classList.add('bootstrap-navbar-scrolled');
       } else {
-        console.log('no esta escroleado');
         this.navbarRef.nativeElement.classList.remove('bootstrap-navbar-scrolled');
       }
     });

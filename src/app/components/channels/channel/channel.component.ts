@@ -22,8 +22,8 @@ export class ChannelComponent implements OnInit {
   videos: Video[];
 
   config: SwiperConfigInterface = {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 5,
+    spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'

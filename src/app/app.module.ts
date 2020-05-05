@@ -14,10 +14,11 @@ import { VideoThumbnailComponent } from './components/video-thumbnail/video-thum
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { SafePipe } from './pipes/safe.pipe';
-import { DragOnTouchDirective } from './directives/drag-on-touch.directive';
+import { PointerCursorDirective } from './directives/pointer-cursor.directive';
 import { LoadingComponent } from './components/loading/loading.component';
 import { BootstrapNavbarComponent } from 'src/app/components/bootstrap-navbar/bootstrap-navbar.component';
 import { VideoDataComponent } from './pages/video-data/video-data.component';
+import { InicioCarouselComponent } from './components/inicio-carousel/inicio-carousel.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { VideoDataComponent } from './pages/video-data/video-data.component';
     FooterComponent,
     InicioComponent,
     SafePipe,
-    DragOnTouchDirective,
+    PointerCursorDirective,
     BootstrapNavbarComponent,
-    VideoDataComponent
+    VideoDataComponent,
+    InicioCarouselComponent
   ],
   imports: [
     BrowserModule,
