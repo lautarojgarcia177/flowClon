@@ -23,7 +23,7 @@ export class InicioComponent implements OnInit {
     effect: 'fade',
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
+      clickable: true
     },
     autoplay: {
       delay: 4000,

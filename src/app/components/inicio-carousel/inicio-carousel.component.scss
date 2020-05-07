@@ -32,17 +32,10 @@
 #reproducir-btn {
     position: absolute;
     top: 90%;
-    left: 60px;
-    border: 1px solid #57DFB7;
-    border-radius: 50px;
+    left: 60px; 
     padding: 8px 25px 8px 25px;
-    background-color: #57DFB7;
     color: black;
     font-weight: bolder;
-    transition-duration: 1000ms;
-    &:hover {
-        background-color: rgb(64, 172, 139);
-    }
  }
 
  #mas-info-btn {
@@ -61,6 +54,7 @@
         color: black;
     }
  }
+
 
  @media only screen and (max-width: 800px) {
     .lautaro-container {

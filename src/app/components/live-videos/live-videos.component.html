@@ -1,0 +1,17 @@
+<div *ngIf="liveVideos$ | async as liveVideos">
+    <h3>Videos en vivo</h3>
+    <div class="swiper-container" [swiper]="config" (swiperTouchStart)="onTouchStart()">
+        <div class="swiper-wrapper">
+            <div *ngFor="let video of liveVideos" class="swiper-slide">
+                <app-live-video-thumbnail
+                    [imgSize]="thumbnailSize"
+                    [videoId]="video.id"
+                    (click)="watchVideo(video.id)"
+                    ></app-live-video-thumbnail>
+            </div>
+        </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+</div>
+<app-loading *ngIf="!liveVideos$"></app-loading>

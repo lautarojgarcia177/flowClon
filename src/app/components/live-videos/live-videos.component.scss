@@ -1,5 +1,5 @@
-  .swiper-container {
-    height: 280px;
+.swiper-container {
+    height: 360px;
   }
 
   .swiper-wrapper {
@@ -7,15 +7,18 @@
   }
 
   .swiper-slide {
-    height: 233px;
+    height: 300px;
     background-position: center;
     background-size: cover;
     background-color: black;
     transition: 250ms all;
-    max-width: 233px;
- 
+
     &:hover {
         transform: scale(1.2);
         z-index: 1;
-    }
+    } 
+  }
+
+  #thumbnail-title {
+    font-size: larger !important;
   }

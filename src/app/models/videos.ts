@@ -23,4 +23,5 @@ export interface VideoDetail {
     description:       string;
     title:             string;
     id: string;
+    duration: number;
 }

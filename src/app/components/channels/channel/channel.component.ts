@@ -35,7 +35,7 @@ export class ChannelComponent implements OnInit {
               private netflixCarouselProvider: NetflixCarouselService) { }
 
   ngOnInit(): void {
-    this.dailyMotionProvider.getChannelVideos(this.channel.id)
+     this.dailyMotionProvider.getChannelVideos(this.channel.id)
       .pipe(
         pluck('list')
       ).subscribe( videos => this.videos = videos);

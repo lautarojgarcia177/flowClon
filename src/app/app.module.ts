@@ -19,6 +19,9 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { BootstrapNavbarComponent } from 'src/app/components/bootstrap-navbar/bootstrap-navbar.component';
 import { VideoDataComponent } from './pages/video-data/video-data.component';
 import { InicioCarouselComponent } from './components/inicio-carousel/inicio-carousel.component';
+import { LiveVideosComponent } from './components/live-videos/live-videos.component';
+import { DurationPipe } from './pipes/duration.pipe';
+import { LiveVideoThumbnailComponent } from './components/live-videos/live-video-thumbnail/live-video-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { InicioCarouselComponent } from './components/inicio-carousel/inicio-car
     PointerCursorDirective,
     BootstrapNavbarComponent,
     VideoDataComponent,
-    InicioCarouselComponent
+    InicioCarouselComponent,
+    LiveVideosComponent,
+    DurationPipe,
+    LiveVideoThumbnailComponent
   ],
   imports: [
     BrowserModule,

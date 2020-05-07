@@ -13,6 +13,7 @@ import { TrendingVerifiedVideos } from '../models/trendingVideos';
 export class DailyMotionService {
   
   private endpoint = 'https://api.dailymotion.com';
+  private token = 'ajJFXQwWGUNYVF8PWkZUAVQGTVkFFRoIBlYDB1sIC1AH';
 
   public trendingVerifiedVideos$ = this.http.get<TrendingVerifiedVideos>('https://api.dailymotion.com/videos?sort=trending&flags=verified')
                                           .pipe(
@@ -25,6 +26,13 @@ export class DailyMotionService {
                                 catchError(this.handleError)
                               );
 
+  public liveVideos$ = this.http.get<any>(
+      'https://api.dailymotion.com/videos?flags=live'
+    ).pipe(
+      tap(res => console.log('trending live videos', res)),
+      catchError(this.handleError)
+    );
+
   constructor(private http: HttpClient) {}
 
   public getChannelVideos(channelId: string): Observable<VideosList> {
@@ -35,7 +43,7 @@ export class DailyMotionService {
   }
 
   public getVideo(videoId: string): Observable<VideoDetail> {
-     return this.http.get<VideoDetail>(this.endpoint + '/video/' + videoId + '?fields=thumbnail_360_url%2Cviews_total%2Ctitle%2Cid%2Cdescription%2Cthumbnail_240_url%2Cthumbnail_1080_url')
+     return this.http.get<VideoDetail>(this.endpoint + '/video/' + videoId + '?fields=thumbnail_360_url%2Cviews_total%2Ctitle%2Cid%2Cdescription%2Cthumbnail_240_url%2Cthumbnail_1080_url%2Cduration&localization=es_AR')
                                   .pipe(
                                     catchError(this.handleError)
                                   );

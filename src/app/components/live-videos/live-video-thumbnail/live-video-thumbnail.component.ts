@@ -12,11 +12,11 @@ export enum ThumbnailSize {
 }
 
 @Component({
-  selector: 'app-video-thumbnail',
-  templateUrl: './video-thumbnail.component.html',
-  styleUrls: ['./video-thumbnail.component.scss']
+  selector: 'app-live-video-thumbnail',
+  templateUrl: './live-video-thumbnail.component.html',
+  styleUrls: ['./live-video-thumbnail.component.scss']
 })
-export class VideoThumbnailComponent implements OnInit {
+export class LiveVideoThumbnailComponent implements OnInit {
 
   @Input() imgSize: ThumbnailSize = ThumbnailSize.extraLarge;
   img: string;

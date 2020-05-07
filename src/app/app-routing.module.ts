@@ -6,7 +6,7 @@ import { VideoComponent } from './components/video/video.component';
 
 
 const routes: Routes = [
-  { path: 'video/:id/reproducir', component: VideoComponent},
+  { path: 'video/:id/play', component: VideoComponent},
   { path: 'video/:id', component: VideoDataComponent},
   { path: 'inicio', component: InicioComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
