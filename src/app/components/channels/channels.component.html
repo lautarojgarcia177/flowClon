@@ -1,8 +1,8 @@
 <ng-container *ngIf="channelsList$ | async as channels">
-        <app-channel
-         *ngFor="let channel of channels"
-         [channel]="channel">
-        </app-channel>
+        <ng-container *ngFor="let channel of channels">
+                <h3 style="margin-top: 1.5rem;">{{channel.name}}</h3>
+                <app-channel [channel]="channel"></app-channel>
+        </ng-container>        
 </ng-container>
 <app-loading *ngIf="!channelsList$"></app-loading>
 

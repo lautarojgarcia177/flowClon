@@ -5,7 +5,9 @@ h1 {
 }
 
 .reproducir-btn {
-    padding: 0px 25px 0px 25px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 0px 20px 0px 20px;
 }
 
 app-favorito {
@@ -24,20 +26,28 @@ app-favorito {
     }
 }
 
-.btn-back {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 105px;
-    left: 1%;
-}
-
 #video-details {
     padding-top: 15rem;
     position: absolute;
     top: 0px;
     background: styles.$background-color;
     background: linear-gradient(0deg, rgba(25,25,25,1) 10%, rgba(25,25,25,0) 100%);
-    z-index: 20;
+    z-index: 1;
+}
+
+#back-ctrl {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.btn-back {
+    // display: block;
+    position: absolute;
+    top: 100px;
+    left: 1%;
+    z-index: 3;
 }
 
 #tambien-podria-gustarte {

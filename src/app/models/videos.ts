@@ -27,6 +27,7 @@ export interface VideoDetail {
     created_time: Date;
     explicit: boolean;
     tags: string;
+    channel: string;
     owner: {
         username: string
     }

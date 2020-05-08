@@ -1,3 +1,6 @@
+<div id="back-ctrl" class="d-flex">
+    <button (click)="navigateBack()" class="btn-back"><i class="fas fa-chevron-left"></i> Volver</button>
+</div>
 <ng-container *ngIf="video$ | async as video">
     <div id="video-poster" class="d-flex">
         <img [src]="video.thumbnail_1080_url">
@@ -12,7 +15,7 @@
                     <div class="row">
                         <h1>{{video.title}}</h1>
                     </div>
-                    <div class="row">
+                    <div class="row mb-4 mt-1">
                         <button class="reproducir-btn"><i class="fas fa-play"></i>  REPRODUCIR</button>
                         <app-favorito [isFavourite]="isFavourite" (changed)="onFavouriteChange($event)"></app-favorito>
                     </div>
@@ -25,23 +28,22 @@
                             <span *ngIf="!video.explicit" class="badge badge-secondary">ATP</span>
                         </p>
                     </div>
-                    <div class="row">
+                    <div class="row" *ngIf="video.description">
                         <p>{{video.description | reduceStringLength:250}}</p>
                     </div>
                     <div class="row">
-                        <h4>Género:</h4><span>{{video.tags | tags:4 | split:' ,'}}</span>
+                        <h5>Género:</h5><span>{{video.tags | tags:4 | split:' ,'}}</span>
                     </div>
                     <div class="row">
-                        <h4>Subido por: {{videoUsername}}</h4>
+                        <h5>Subido por: {{videoUsername}}</h5>
                     </div>
                 </div>
             </div> 
         </div>
     </section>
-    <section id="tambien-podria-gustarte">
-
-    </section>
 </ng-container>
+    <section id="tambien-podria-gustarte" *ngIf="channel$ | async as channel">
+        <h3 style="padding-top: 100px;">También podría gustarte</h3>
+        <app-channel *ngIf="channel" [channel]="channel"></app-channel>
+    </section>
     <app-loading *ngIf="!video$"></app-loading>
-
-    <!-- <button class="btn-back"><i class="fas fa-chevron-left"></i> Volver</button> -->
