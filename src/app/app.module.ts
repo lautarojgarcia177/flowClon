@@ -22,6 +22,11 @@ import { InicioCarouselComponent } from './components/inicio-carousel/inicio-car
 import { LiveVideosComponent } from './components/live-videos/live-videos.component';
 import { DurationPipe } from './pipes/duration.pipe';
 import { LiveVideoThumbnailComponent } from './components/live-videos/live-video-thumbnail/live-video-thumbnail.component';
+import { FavoritoComponent } from './components/favorito/favorito.component';
+import { TimestampPipe } from './pipes/timestamp.pipe';
+import { SplitPipe } from './pipes/split.pipe';
+import { TagsPipe } from './pipes/tags.pipe';
+import { NavbarScrollDirective } from './directives/navbar-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,12 @@ import { LiveVideoThumbnailComponent } from './components/live-videos/live-video
     InicioCarouselComponent,
     LiveVideosComponent,
     DurationPipe,
-    LiveVideoThumbnailComponent
+    LiveVideoThumbnailComponent,
+    FavoritoComponent,
+    TimestampPipe,
+    SplitPipe,
+    TagsPipe,
+    NavbarScrollDirective
   ],
   imports: [
     BrowserModule,

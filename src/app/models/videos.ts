@@ -24,4 +24,10 @@ export interface VideoDetail {
     title:             string;
     id: string;
     duration: number;
+    created_time: Date;
+    explicit: boolean;
+    tags: string;
+    owner: {
+        username: string
+    }
 }

@@ -43,7 +43,7 @@ export class DailyMotionService {
   }
 
   public getVideo(videoId: string): Observable<VideoDetail> {
-     return this.http.get<VideoDetail>(this.endpoint + '/video/' + videoId + '?fields=thumbnail_360_url%2Cviews_total%2Ctitle%2Cid%2Cdescription%2Cthumbnail_240_url%2Cthumbnail_1080_url%2Cduration&localization=es_AR')
+     return this.http.get<VideoDetail>(this.endpoint + '/video/' + videoId + '?fields=thumbnail_360_url%2Cviews_total%2Ctitle%2Cid%2Cdescription%2Cthumbnail_240_url%2Cthumbnail_1080_url%2Cduration%2Ccreated_time%2Cexplicit%2Ctags%2Cowner.username&localization=es_AR')
                                   .pipe(
                                     catchError(this.handleError)
                                   );

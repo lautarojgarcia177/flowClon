@@ -1,0 +1,10 @@
+@use '../../../styles';
+
+button {
+    background: none;
+    border: none; 
+}
+
+i {
+    color: styles.$primary-color;
+}

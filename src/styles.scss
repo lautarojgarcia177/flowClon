@@ -8,6 +8,8 @@ $primary-color: #57DFB7;
 $primary-color-hover: rgb(64, 172, 139);
 $secondary-color: white;
 
+$text-background: rgba(0, 0, 0, 0.4);
+
 body {
     font-family: $font-stack !important;
     color: white !important;
@@ -18,8 +20,23 @@ body {
     border: 1px solid $primary-color;
     border-radius: 50px;
     background-color: $primary-color;
+    font-weight: bolder;
     transition-duration: 1000ms;
     &:hover {
         background-color: $primary-color-hover;
     }
+}
+
+.btn-back {
+    z-index: 1;
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    background-color: $text-background;
+    color: $secondary-color;
+    font-size: medium;
+    font-weight: bold;
 }

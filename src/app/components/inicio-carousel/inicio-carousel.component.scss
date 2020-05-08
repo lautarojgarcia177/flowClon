@@ -1,3 +1,5 @@
+@use '../../../styles';
+
 .lautaro-container {
     width: 100%;
     height: 100%;
@@ -35,7 +37,6 @@
     left: 60px; 
     padding: 8px 25px 8px 25px;
     color: black;
-    font-weight: bolder;
  }
 
  #mas-info-btn {
@@ -45,8 +46,8 @@
     border: 1px solid white;
     border-radius: 50px;
     padding: 8px 25px 8px 25px;
-    background-color: rgba(87, 223, 182, 0);
-    color: white;
+    background-color: styles.$text-background;
+    color: styles.$secondary-color;
     font-weight: bolder;
     transition-duration: 1000ms;
     &:hover {
@@ -63,7 +64,7 @@
 
     #carousel-title {
         max-width: 800px;
-        color: white;
+        color: styles.$secondary-color;
         font-weight: 900;
         font-size: 20px;
         text-align: center;

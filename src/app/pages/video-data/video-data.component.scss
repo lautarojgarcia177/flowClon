@@ -5,3 +5,22 @@
 h1 {
     color: #57DFB7;
 }
+
+.reproducir-btn {
+    padding: 0px 25px 0px 25px;
+}
+
+app-favorito {
+    font-size: 30px;
+}
+
+#video-poster {
+    position: absolute;
+    height: 600px;
+
+    & img {
+        width: 100%;
+        object-fit: cover;
+        
+    }
+}

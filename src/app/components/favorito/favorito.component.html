@@ -1,0 +1,4 @@
+<button *ngIf="!isLoading" (click)="toggleFavourite()">
+    <i #heart class="far fa-heart"></i>
+</button>
+<app-loading *ngIf="isLoading"></app-loading>
