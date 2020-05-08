@@ -1,10 +1,10 @@
+import { VideoDetail } from './../../models/videos';
 import { FavoritoComponent } from './../../components/favorito/favorito.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DailyMotionService } from 'src/app/services/daily-motion.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap, tap, map, pluck } from 'rxjs/operators';
-import { VideoDetail } from 'src/app/models/videos';
 import { DomSanitizer, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -40,6 +40,8 @@ export class VideoDataComponent implements OnInit {
 
   isFavourite = false;
 
+  video: VideoDetail;
+
   @ViewChild(FavoritoComponent) private favComponent: FavoritoComponent; 
 
   constructor(private dailyMotionProvider: DailyMotionService,
@@ -48,6 +50,7 @@ export class VideoDataComponent implements OnInit {
 
 
   ngOnInit(): void {
+    
   }
 
   onFavouriteChange(event) {

@@ -1,6 +1,4 @@
-#spacing {
-    height: 6rem;
-}
+@use '../../../styles.scss';
 
 h1 {
     color: #57DFB7;
@@ -15,12 +13,35 @@ app-favorito {
 }
 
 #video-poster {
-    position: absolute;
-    height: 600px;
-
+    position: -webkit-sticky;
+    position: sticky;
+    height: 470px;
+    top: 0px;
+    z-index: 0;
     & img {
         width: 100%;
         object-fit: cover;
-        
     }
+}
+
+.btn-back {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 105px;
+    left: 1%;
+}
+
+#video-details {
+    padding-top: 15rem;
+    position: absolute;
+    top: 0px;
+    background: styles.$background-color;
+    background: linear-gradient(0deg, rgba(25,25,25,1) 10%, rgba(25,25,25,0) 100%);
+    z-index: 20;
+}
+
+#tambien-podria-gustarte {
+    position: relative;
+    min-height: 400px;
+    background-color: styles.$background-color;
 }

@@ -9,6 +9,7 @@ $primary-color-hover: rgb(64, 172, 139);
 $secondary-color: white;
 
 $text-background: rgba(0, 0, 0, 0.4);
+$text-background-hover:  rgba(0, 0, 0, 0.8);
 
 body {
     font-family: $font-stack !important;
@@ -29,14 +30,15 @@ body {
 
 .btn-back {
     z-index: 1;
-    position: absolute;
-    top: 8%;
-    left: 1%;
     border: none;
     border-radius: 20px;
-    padding: 5px 15px 5px 15px;
+    padding: 8px 18px 8px 18px;
     background-color: $text-background;
     color: $secondary-color;
     font-size: medium;
     font-weight: bold;
+
+    &:hover {
+        background-color: $text-background-hover;
+    }
 }

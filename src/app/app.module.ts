@@ -27,6 +27,7 @@ import { TimestampPipe } from './pipes/timestamp.pipe';
 import { SplitPipe } from './pipes/split.pipe';
 import { TagsPipe } from './pipes/tags.pipe';
 import { NavbarScrollDirective } from './directives/navbar-scroll.directive';
+import { ReduceStringLengthPipe } from './pipes/reduce-string-length.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NavbarScrollDirective } from './directives/navbar-scroll.directive';
     TimestampPipe,
     SplitPipe,
     TagsPipe,
-    NavbarScrollDirective
+    NavbarScrollDirective,
+    ReduceStringLengthPipe
   ],
   imports: [
     BrowserModule,

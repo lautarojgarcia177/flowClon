@@ -1,49 +1,47 @@
-<div id="spacing"></div>
-<button class="btn-back"><i class="fas fa-chevron-left"></i> Volver</button>
 <ng-container *ngIf="video$ | async as video">
     <div id="video-poster" class="d-flex">
-        <!-- [ngStyle]="{'background-image': 'url(' + video.thumbnail_1080_url + ')'}"> -->
         <img [src]="video.thumbnail_1080_url">
-    </div>  
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-4 d-flex justify-content-end align-items-center">
-                <img [src]="video.thumbnail_240_url">
-            </div>
-            <div class="col-8">
-                <div class="row">
-                    <h1>{{video.title}}</h1>
-                </div>
-                <div class="row">
-                    <button class="reproducir-btn"><i class="fas fa-play"></i>  REPRODUCIR</button>
-                    <app-favorito [isFavourite]="isFavourite" (changed)="onFavouriteChange($event)"></app-favorito>
-                </div>
-                <div class="row">
-                    <p>
-                        <i class="far fa-clock"></i> 
-                        {{video.duration | duration}}
-                        &#8226;
-                        {{video.created_time | timestamp | date:'yyyy'}}
-                        <span *ngIf="!video.explicit" class="badge badge-secondary">ATP</span>
-                    </p>
-                </div>
-                <div class="row">
-                    <p>{{video.description}}</p>
-                </div>
-                <div class="row">
-                    <h4>Género:</h4><span>{{video.tags | tags:4 | split:' ,'}}</span>
-                </div>
-                <div class="row">
-                    <h4>Subido por: {{videoUsername}}</h4>
-                </div>
-            </div>
-        </div> 
     </div>
-<!--     <div class="container-fluid">
-        <app-channel *ngIf="video$ && channelsList$ | async as channels" [channel]="channels[0]"></app-channel>
-    </div> -->
-</ng-container>
-<section style="height: 90vh;"></section>
+    <section id="video-details" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <img [src]="video.thumbnail_240_url">
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <h1>{{video.title}}</h1>
+                    </div>
+                    <div class="row">
+                        <button class="reproducir-btn"><i class="fas fa-play"></i>  REPRODUCIR</button>
+                        <app-favorito [isFavourite]="isFavourite" (changed)="onFavouriteChange($event)"></app-favorito>
+                    </div>
+                    <div class="row">
+                        <p>
+                            <i class="far fa-clock"></i> 
+                            {{video.duration | duration}}
+                            &#8226;
+                            {{video.created_time | timestamp | date:'yyyy'}}
+                            <span *ngIf="!video.explicit" class="badge badge-secondary">ATP</span>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p>{{video.description | reduceStringLength:250}}</p>
+                    </div>
+                    <div class="row">
+                        <h4>Género:</h4><span>{{video.tags | tags:4 | split:' ,'}}</span>
+                    </div>
+                    <div class="row">
+                        <h4>Subido por: {{videoUsername}}</h4>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section id="tambien-podria-gustarte">
 
-<app-loading *ngIf="!video$"></app-loading>
+    </section>
+</ng-container>
+    <app-loading *ngIf="!video$"></app-loading>
+
+    <!-- <button class="btn-back"><i class="fas fa-chevron-left"></i> Volver</button> -->
